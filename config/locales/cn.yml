@@ -1,0 +1,734 @@
+cn:
+  language:
+    title: "中文"
+  form:
+    loading: "请稍候..."
+    confirmation: "确定"
+    performing_task: "请稍候,任务进行中..."
+    error:
+      title: "错误"
+      fill_form: "请填满表格"
+    info:
+      title: "信息"
+    button:
+      save: "保存"
+      cancel: "取消"
+      create: "创建"
+      back: "返回"
+  activerecord:
+    errors:
+      models:
+        user:
+          attributes:
+            password:
+              confirmation: "您输入的两次密码不相同"
+              too_short: "密码太短了 (最小字符数: {{count}})."
+            password_confirmation:
+              blank: "请确认您的密码"
+            login:
+              taken: "您所创建的用户已经存在"
+              too_short: "用户名太短 (最小字符数: {{count}})."
+        hardware_server:
+          attributes:
+            host:
+              taken: "已经有服务器用了您所指定的名字"
+              connection: "连接出错，可能守护进程没有运行"
+              ssh_connection: "无法创建SSH连接"
+              openvz_not_found: "OpenVZ虚拟化组件无法在该服务器上找到"
+              ruby_not_found: "Ruby解释器无法在该服务器上找到"
+            auth_key:
+              bad_auth: "验证失败,可能是错误的验证密钥"
+            daemon_port:
+              not_a_number: "错误的端口号"
+              greater_than: "端口号应该大于 {{count}}."
+              less_than: "端口号应该小于 {{count}}."
+            root_password:
+              ssh_bad_auth: "SSH验证失败"
+              empty: "这个表单需要填写"
+        virtual_server:
+          attributes:
+            ip_address:
+              invalid: "错误的IP地址"
+              taken: "IP地址已经分配给其它服务器了"
+              not_found_in_pool: "IP地址无法在地址库里找到"
+            identity:
+              taken: "这样的验证已经存在在其它服务器上面了"
+            password:
+              confirmation: "密码和验证的密码不相等"
+            nameserver:
+              invalid: "DNS服务器地址需要填写"
+            host_name:
+              invalid: "主机名有误"
+            search_domain:
+              invalid: "搜索域有误"
+            description:
+              invalid: "注释包含非法字符"
+        server_template:
+          attributes:
+            name:
+              taken: "已经存在有相同名字的服务器模版"
+        role:
+          attributes:
+            name:
+              taken: "已经存在相同名字的Role"
+        ip_pool:
+          attributes:
+            first_ip:
+              invalid: "错误的IP地址"
+              bad_range: "错误的IP地址池"
+            last_ip:
+              invalid: "错误的IP地址"
+  api:
+    error:
+      access_denied: "没有权限"
+      object_not_found: "对象不存在"
+      unknown_error: "未知的错误"
+      internal_error: "内部错误"
+  about:
+    copyright: "Copyright 2008-2015 SoftUnity. 中文翻译 By Ted"
+    right_reserved: "All Rights Reserved."
+    about_program: "关于程序"
+    author: "主要开发者"
+    contributors: "参与者列表"
+    contributors_list: "列表"
+    web_site: "站点"
+  login:
+    page_title: "登录"
+    window_title: "登录至 {{product}}"
+    username: "用户名"
+    password: "密码"
+    remember_me: "记住我"
+    button_login: "登录"
+    button_restore_password: "保存密码"
+    locale: "语言"
+    bad_login: "错误的用户名或密码"
+    locked_user: "用户被锁定"
+    ip_restricted: "IP暂时被禁止"
+  restore_password:
+    page_title: "恢复密码"
+    window_title: "找回密码"
+    username: "用户名"
+    button_restore: "恢复"
+    restore_link_sent: "密码恢复链接已经发送到邮箱."
+    error:
+      user_not_found: "用户找不到"
+      no_email: "无法找到密码，因为该用户没有设置邮箱"
+    mail:
+      restore_link:
+        subject: "密码恢复"
+        body: "恢复密码请进入: {{link}}"
+  reset_password:
+    page_title: "重设密码"
+    window_title: "重设密码"
+    new_password: "新密码"
+    confirm_password: "旧密码"
+    password_changed: "密码已经修改"
+  admin:
+    menu:
+      title: "目录"
+      general:
+        title: "通用"
+        dashboard: "面板"
+        hardware_servers: "物理服务器"
+        ip_addresses: "IP地址"
+        virtual_servers: "虚拟服务器"
+        my_profile: "我的个人资料"
+        users: "用户"
+        requests: "请求"
+        tasks: "任务"
+        event_log: "事件日志"
+        logout: "退出"
+      help:
+        title: "帮助"
+        documentation: "文档"
+        support: "支持"
+    operations:
+      up_level: "上一级"
+      search: "搜索"
+    logout: "您确定您要退出吗"
+    search:
+      form:
+        title: "搜索"
+        field:
+          query: "结果"
+        button:
+          search: "搜索"
+    my_profile:
+      title: "我的个人资料"
+      user_name: "用户名"
+      current_password: "旧的密码"
+      new_password: "新的密码"
+      confirm_password: "确认密码"
+      bad_current_password: "旧的密码不正确"
+      contact_name: "联系人"
+      email: "邮箱"
+    events:
+      internal_error: "内部错误: {{message}}"
+      hardware_server:
+        connect: "物理服务器 {{host}} 已经连接到."
+        disconnect: "物理服务器 {{host}} 已经断开连接"
+        sync: "服务器 {{host}} 的状态已经更新"
+        sync_failed: "同步服务器 {{host}} 的状态失败"
+        reboot: "开始重启服务器 {{host}}."
+      virtual_server:
+        created: "虚拟服务器 {{identity}} 已创建"
+        removed: "虚拟服务器 {{identity}} 被移除."
+        change_state_failed: "更改服务器的信息失败 {{identity}}; 状态: {{state}}; 响应码: {{code}}."
+        updated: "虚拟服务器的设置 {{identity}} 已经被更新"
+        cloned: "虚拟服务器 {{identity}} 已经被克隆"
+        counter_reached: "{{name}} 的限制已经达到了 {{identity}} 物理服务器 {{host}} 的权限."
+      user:
+        login:
+          ok: "用户 {{login}} 已经登录"
+          bad_password: "用户 {{login}} 登录错误因为密码错误"
+          bad_login: "登录请求包含无效用户名."
+          locked_user: "锁定用户 {{login}} 尝试登录"
+          ip_restricted: "IP被锁定是因为用户 {{login}} 登录"
+        logout: "用户 {{login}} 已经退出"
+        removed: "用户 {{login}} 已经删除"
+        enabled: "用户 {{login}} 已经启用"
+        disabled: "用户 {{login}} 已经禁用"
+        created: "用户 {{login}} 已经创建"
+        updated: "用户 {{login}} 已经更新"
+        profile_updated: "用户 {{login}} 信息已经被更新"
+      role:
+        removed: "Role {{name}} 已经被删除"
+        created: "Role {{name}} 已经被创建"
+        updated: "Role {{name}} 已经被升级"
+      request:
+        created: "请求 #{{id}} 已经创建"
+        updated: "Request #{{id}} 已经更新"
+        removed: "Request #{{id}} 已经删除"
+      comment:
+        created: "回复在请求 #{{request_id}} 已经创建"
+    tasks:
+      os_templates:
+        install: "系统模版安装在服务器 {{host}} 上"
+      backups:
+        create: "创建虚拟服务器的备份 #{{identity}} 在物理服务器 {{host}} 上"
+        restore: "恢复虚拟服务器的备份 #{{identity}} 在物理服务器 {{host}} 上"
+    dashboard:
+      title: "面板"
+      intro:
+        title: "介绍"
+        text: "OpenVZ Web Panel 是一个为了控制Openvz虚拟化服务器而制作的图形化网页管理面板"
+      profile:
+        title: "用户信息"
+        text: "您以 {{login}} 的身份登录"
+      updates:
+        text: "新版本: {{product}} 已经可用"
+        update_command: "如果要更新，请执行以下代码 {{command}}"
+      stats_grid:
+        title: "统计"
+        column:
+          parameter: "参数"
+          value: "值"
+        parameter:
+          panel_users: "面板用户"
+          hardware_servers: "物理服务器"
+          virtual_servers: "虚拟服务器"
+          virtual_servers_running: "运行中的虚拟服务器"
+          virtual_servers_stopped: "停止的虚拟服务器"
+          virtual_servers_expired: "过期的虚拟服务器"
+          opened_requests: "打开的请求"
+    hardware_servers:
+      title: "物理服务器"
+      grid:
+        title: "物理服务器列表"
+        column:
+          host_name: "主机名"
+          description: "描述"
+          virtual_servers: "虚拟服务器"
+        button:
+          connect: "连接到新的服务器"
+          reconnect: "重新连接到服务器"
+          disconnect: "断开服务器连接"   
+          details: "详情" 
+          sync: "同步"
+          edit: "修改设置"
+          reboot: "重启"
+      form:
+        connect_server:
+          title: "连接到新的物理服务器"
+          edit_title: "更改物理服务器的设置"
+          button_connect: "连接"
+          field:
+            host_name: "主机名"
+            auth_key: "验证密钥"
+            description: "描述"
+            daemon_port: "服务端口"
+            root_password: "Root的密码"
+            use_ssl: "使用 SSL"
+          fieldset:
+            additional_settings: "附加设置"
+        disconnect_server:
+          sure_to_disconnect: "您确定要断开与选择的服务器的连接吗?"
+          deletion_failed: "服务器断开请求错误"
+        sync:
+          sync_failed: "无法同步一些物理服务器的信息"
+        reboot_server:
+          sure_to_reboot: "选定的服务器在重启中无法使用,您确定重启它们吗?"
+          reboot_failed: "一些服务器无法重启"
+      show:
+        title: "物理服务器 {{name}}"
+      top_toolbar:
+        os_templates: "系统模版"
+        server_templates: "服务器套餐"
+      stats:
+        title: "物理服务器状态"
+        column:
+          parameter: "参数"
+          value: "值"
+        field:
+          os_version: "系统版本"
+          cpu_load_average: "CPU负载信息"
+          disk_usage: "磁盘使用情况, 磁盘 {{partition}}"
+          memory_usage: "内存使用情况"
+        value:
+          disk_usage: "{{percent}}%, {{used}} of {{total}} / {{free}} free"
+          memory_usage: "{{percent}}%, {{used}} of {{total}} / {{free}} free"
+    virtual_servers:
+      title: "虚拟服务器"
+      limits:
+        unlimited: "无限制"
+      grid:
+        title: "虚拟服务器列表"
+        column:
+          state: "状态"
+          identity: "VEID"
+          ip_address: "IP地址"
+          host_name: "主机"
+          os_template: "系统"
+          memory: "内存, Mb"
+          diskspace: "磁盘, Mb"
+          expiration_date: "过期日期"
+          owner: "用户"
+          description: "描述"
+        button:
+          create: "创建虚拟服务器"
+          destroy: "删除虚拟服务器"
+          change_state: "修改状态"
+          start: "开机"
+          restart: "重启"
+          stop: "停止"
+          edit: "修改设置"
+          limits: "限制"
+          reinstall: "重装"
+          clone: "克隆"
+          change_settings: "修改设置"
+          console: "终端"
+          backup: "备份"
+          tools: "工具"
+          migrate: "迁移"
+          create_template: "创建模版"
+      form:
+        change_settings:
+          title: "修改"
+        reinstall:
+          title: "重装虚拟服务器"
+          button:
+            reinstall: "重装"
+        change_state:
+          failed: "无法更改虚拟服务器的状态"
+        remove_server:
+          sure_to_remove: "您想删除选定的服务器吗?"
+          deletion_failed: "无法删除一些服务器"
+        create_server:
+          title: "创建新的虚拟服务器"
+          edit_title: "修改虚拟服务器的设置"
+          button_create: "创建"
+          field:
+            identity: "服务器ID (VEID)"
+            os_template: "系统模版"
+            select_os_template: "选定的系统模版"
+            ip_address: "IP 地址"
+            host_name: "主机名"
+            password: "Root 密码"
+            confirm_password: "确定密码"
+            start_on_boot: "开机启动"
+            start_after_creation: "创建后启动"
+            nameserver: "DNS 服务器"
+            search_domain: "搜索域"
+            diskspace: "磁盘空间, Mb"
+            memory: "RAM 内存, Mb"
+            vswap: "Swap, Mb"
+            status: "状态"
+            owner: "用户"
+            select_owner: "选定一个用户"
+            no_owner: "没有用户"
+            server_template: "服务器套餐"
+            select_server_template: "选择服务器套餐"
+            description: "描述"
+            cpu_units: "CPU 单元"
+            cpus: "CPU的数量"
+            cpu_limit: "CPU的限制, %"
+            expiration_date: "过期日期"
+            daily_backup: "每日备份"
+          fieldset:
+            general: "通用"
+            network: "网络"
+            system_access: "系统权限"
+            misc: "杂项"
+            dns_settings: "DNS设置"
+            limits: "限制"
+          tab:
+            main_settings: "主要的设置"
+            additional_settings: "附加设置"
+        create_template:
+          title: "创建基于虚拟服务器的模版"
+          button_create: "创建"
+          field:
+            name: "名字"
+          error:
+            invalid_name: "只允许数字和英语字母"
+            template_exists: "同样名字的系统模版已经存在"
+        limits:
+          title: "限制"
+          grid:
+            column:
+              name: "名字"
+              soft_limit: "软限制"
+              hard_limit: "硬限制"
+        console:
+          title: "终端"
+          error:
+            code: "返回码:"
+            output: "输出:"
+          field:
+            command: "命令行"
+          button:
+            run: "运行"
+        clone:
+          title: "克隆虚拟服务器"
+        migrate:
+          title: "合并虚拟服务器"
+          field:
+            target: "目标服务器"
+          button_migrate: "合并"
+          note: "在合并之前需要生成ROOT的SSH公钥在现有物理服务器的资源上,然后复制到目标服务器.通常需要检查或者安装目标服务器上的Rsync"
+      show:
+        title: "虚拟服务器 {{name}}"
+        grid:
+          title: "虚拟服务器信息"
+          column:
+            parameter: "参数"
+            value: "值"
+      stats:
+        title: "虚拟服务器统计信息"
+        field:
+          cpu_load_average: "CPU负载"
+          disk_usage: "磁盘用量"
+          memory_usage: "内存用量"
+        value:
+          disk_usage: "{{percent}}%, {{used}} of {{total}} / {{free}} free"
+          memory_usage: "{{percent}}%, {{used}} of {{total}} / {{free}} free"
+        button:
+          stat_details: "详情"
+      stat_details:
+        title: "虚拟服务器 {{name}} 统计信息"
+        grid:
+          title: "虚拟服务器限制"
+          column:
+            parameter: "参数"
+            current: "当前用量"
+            max: "最大用量"
+            barrier: "屏障"
+            limit: "现在"
+            failcnt: "错误"
+        chart:
+          cpu_usage:
+            title: "CPU用量"
+          ram_usage:
+            title: "内存用量"
+          disk_usage:
+            title: "磁盘用量"
+    os_templates:
+      title: "在物理服务器 {{name}} 上的系统模版"
+      grid:
+        title: "安装系统模版"
+        column:
+          name: "名字"
+          size: "大小, Mb"
+          virtual_servers: "服务器"
+        button:
+          install_new_template: "安装新的系统模版"
+          remove: "删除系统模版"
+      form:
+        install:
+          title: "新系统模版安装器"
+          tab:
+            official: "官方的"
+            contributed: "社区的"
+            url: "URL"
+          button_install: "安装"
+          load_failed: "加载系统模版列表失败"
+          failed: "开始安装新的系统模版失败"
+          scheduled: "新的系统模版的安装进程运行中,稍后就能看到新模版"
+          field:
+            url: "模版 URL"
+          invalid_url: "请输入正确的系统模版压缩文件的URL"
+        remove_template:
+          sure_to_remove: "你确定删除选定的系统模版?"
+          deletion_failed: "无法删除某些系统模版"
+    event_log:
+      title: "事件日志"
+      grid:
+        title: "最新的事件"
+        column:
+          level: "状态"
+          created_at: "日期"
+          ip_address: "IP地址"
+          message: "消息"
+          id: "ID"
+        button:
+          clear: "删除日志"
+      form:
+        clear:
+          sure_to_clear: "你确定删除所有的记录?"
+          clear_failed: "无法删除记录"
+    users:
+      role:
+        infrastructure_admin: "完全的系统管理员"
+        virtual_server_owner: "虚拟服务器用户"
+      title: "用户"
+      top_toolbar:
+        roles: "类别"
+      grid:
+        title: "用户列表"
+        column:
+          enabled: "信息"
+          login: "登录"
+          created_at: "创建日期"
+          role: "类别"
+          contact_name: "联系人"
+          email: "电子邮箱"
+        button:
+          add: "添加用户"
+          remove: "删除用户"
+          edit: "修改用户"
+          enable: "启用"
+          disable: "禁止"
+      form:
+        remove_user:
+          sure_to_remove: "你确定删除选定的用户?"
+          deletion_failed: "无法删除某些用户"
+        create:
+          title: "创建新用户"
+          edit_title: "修改用户"
+          button_create: "创建"
+          field:
+            login: "登录"
+            password: "密码"
+            confirm_password: "确认密码"
+            role: "类别"
+            select_role: "选择一个类别"
+            contact_name: "联系人"
+            email: "电子邮箱"
+    task:
+      title: "任务"
+      grid:
+        title: "任务列表"
+        column:
+          status: "状态"
+          id: "ID"
+          description: "描述"
+    server_templates:
+      title: "S物理服务器 {{name}} 上的系统模版"
+      grid:
+        title: "可用的系统模版"
+        column:
+          name: "名字"
+          template_default: "默认"
+          virtual_servers: "服务器"
+        button:
+          add: "添加模版"
+          remove: "删除模版"
+          edit: "修改模版"
+      form:
+        remove_template:
+          sure_to_remove: "你确定删除选定的模版?"
+          deletion_failed: "无法删除某些模版"
+        create_server:
+          title: "创建新的系统模版"
+          edit_title: "修改系统模版"
+          button_create: "创建"
+          tab:
+            main_settings: "主要设置"
+            advanced_settings: "高级设置"
+          fieldset:
+            general: "通用"
+            limits: "现在"
+            dns_settings: "DNS设置"
+            start_options: "启动设置"
+          field:
+            name: "名字"
+            diskspace: "磁盘空间, Mb"
+            memory: "内存, Mb"
+            vswap: "Swap, Mb"
+            start_on_boot: "开机启动"
+            nameserver: "DNS服务器"
+            search_domain: "搜索域"
+            cpu_units: "CPU单元"
+            cpus: "CPU数量"
+            cpu_limit: "CPU限制, %"
+          grid:
+            column:
+              name: "名字"
+              soft_limit: "屏障"
+              hard_limit: "限制"
+    backups:
+      title: "虚拟服务器 {{name}} 的备份"
+      grid:
+        title: "备份"
+        button:
+          create: "备份"
+          restore: "恢复"
+          destroy: "删除"
+        column:
+          archive_date: "日期"
+          description: "描述"
+          size: "大小, Mb"
+      form:
+        remove_backup:
+          sure_to_remove: "你确定删除选定的备份?"
+          deletion_failed: "无法删除某些备份"
+        create:
+          title: "创建新备份"
+          scheduled: "创建备份开始，并需要一些事件"
+          limit_reached: "已完成指定数量的备份"
+          field:
+            description: "描述"
+            ve_state:
+              title: "服务器信息"
+              suspend: "禁用"
+              stop: "停止"
+              live: "保持运行"
+          button_create: "创建"
+        restore:
+          sure_to_restore: "你确定恢复选定的备份吗，服务器将不可用"
+          failed: "恢复失败"
+          scheduled: "恢复开始并且需要一点时间"
+    requests:
+      title: "请求"
+      grid:
+        title: "请求列表"
+        column:
+          opened: "状态"
+          id: "ID"
+          subject: "主题"
+          replies: "回答"
+          author: "作者"
+          updated_at: "更新日期"
+        button:
+          add: "创建请求"
+          remove: "删除请求"
+          details: "详情"
+          solve: "克隆请求"
+          reopen: "回复请求"
+      form:
+        remove_request:
+          sure_to_remove: "您想删除选定的请求?"
+          deletion_failed: "无法删除某些请求"
+        create:
+          title: "创建请求"
+          button_create: "创建"
+          field:
+            subject: "主题"
+            content: "信息"
+      comments:
+        title: "请求 #{{id}}"
+        grid:
+          title: "回复"
+          column:
+            created_at: "日期"
+            author: "作者"
+            content: "信息"
+          button:
+            add: "添加回复"
+        form:
+          add:
+            title: "添加回复"
+            button_add: "添加"
+            field:
+              content: "信息"
+      mail:
+        new_request:
+          subject: "新的请求 #{{id}}"
+          body: "新的请求 #{{id}} 由 {{login}} 创建."
+        new_comment:
+          subject: "在请求 #{{request_id}} 上的新回复"
+          body: "在请求 #{{request_id}} 上新的回复是由 {{login}} 添加的"
+    roles:
+      title: "类别列表"
+      grid:
+        title: "类别列表"
+        column:
+          name: "名字"
+          users: "用户"
+        button:
+          add: "添加类别"
+          remove: "删除类别"
+          edit: "修改类别"
+      form:
+        remove_role:
+          sure_to_remove: "你确定删除选定的类别?"
+          deletion_failed: "无法删除某些类别，某些类别上的用户无法被删除"
+        create:
+          title: "创建新类别"
+          edit_title: "修改类别"
+          field:
+            name: "名字"
+          fieldset:
+            permissions: "权限"
+            limits: "限制"
+          button_create: "创建"
+          permissions:
+            manage_hardware_servers: "物理服务器管理器"
+            use_ve_console: "虚拟服务器终端"
+            backup_ve: "虚拟服务器备份"
+            reinstall_ve: "虚拟服务器重装"
+            handle_requests: "请求提交"
+            create_requests: "请求创建"
+            view_tasks: "任务列表"
+            view_logs: "事件日志查看"
+            manage_logs: "事件日志管理"
+            manage_users: "用户管理"
+            select_os_on_reinstall: "在重装中选择系统"
+          limits:
+            unlimited: "无限制"
+            limit_backups: "备份的数目"
+    ip_addresses:
+      title: "IP地址"
+      grid:
+        title: "IP地址列表"
+        column:
+          name: "IP地址"
+          virtual_server: "虚拟服务器"
+          hardware_server: "物理服务器"
+    ip_pools:
+      grid:
+        title: "IP池列表"
+        column:
+          first_ip: "起始IP"
+          last_ip: "结尾IP"
+          free_ips: "空闲 IPs"
+          used_ips: "使用 IPs"
+          total_ips: "IP总数"
+          server: "服务器"
+        button:
+          create: "创建IP池"
+          destroy: "删除IP池"
+          edit: "修改IP池"
+      form:
+        remove_pool:
+          sure_to_remove: "你想删除选定的IP池吗?"
+          deletion_failed: "无法删除一些IP池"
+        create:
+          title: "创建新的IP池"
+          edit_title: "修改IP池"
+          field:
+            first_ip: "起始IP"
+            last_ip: "结束IP"
+            limit_server: "服务器"
+            all_servers: "所有"
+          button_create: "创建"
